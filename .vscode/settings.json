@@ -1,0 +1,13 @@
+{
+  "files.associations": {
+    "vector": "cpp",
+    "initializer_list": "cpp",
+    "valarray": "cpp",
+    "new": "cpp",
+    "ostream": "cpp",
+    "type_traits": "cpp",
+    "random": "cpp",
+    "iostream": "cpp",
+    "cstdlib": "cpp"
+  }
+}
