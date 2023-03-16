@@ -6,7 +6,7 @@
 // You must solve the problem without modifying the array nums and uses only constant extra space.
 
 #include <bits/stdc++.h>
-           using namespace std;
+using namespace std;
 int findDuplicate(vector<int> &nums)
 {
     int slow = nums[0];
