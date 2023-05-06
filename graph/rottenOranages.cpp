@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// T.C.: O(n*m) where e is the number of edges
+// T.C.: O(n*m)
 
 int orangesRotting(vector<vector<int>> &grid)
 {
