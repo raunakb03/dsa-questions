@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// T.C.: O(V+E) where v is the number of nodes and e is the edges
+
 vector<int> bfsOfGraph(int V, vector<int> adj[])
 {
     vector<int> ans;
