@@ -2,6 +2,7 @@
 using namespace std;
 typedef long long ll;
 
+
 ll countPaths(int n, vector<vector<int>>& roads) {
         vector<pair<ll, ll>> adj[n];
         for(auto it : roads){
