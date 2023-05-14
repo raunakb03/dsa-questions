@@ -1,26 +1,33 @@
-// https: // leetcode.com/problems/merge-intervals/description/
-// 16/2/2003
-
-// Given an array of intervals where intervals[i] = [ starti, endi ], merge all overlapping intervals, and return an array of the non - overlapping intervals that cover all the intervals in the input.
-
 #include <bits/stdc++.h>
 using namespace std;
+
 vector<vector<int>> merge(vector<vector<int>> &intervals)
 {
-    vector<vector<int>> ans;
     sort(intervals.begin(), intervals.end());
-    int n = intervals.size();
-    int j = 0;
-    ans.push_back(intervals[0]);
-    for (int i = 1; i < n; i++)
+    int mini = intervals[0][0];
+    int maxi = intervals[0][1];
+    vector<vector<int>> ans;
+    int k = 0;
+    for (int i = 1; i < intervals.size(); i++)
     {
-        if (ans[j][1] >= intervals[i][0])
-            ans[j][1] = max(intervals[i][1], ans[j][1]);
-        else
+        k = 0;
+        int first = intervals[i][0];
+        int second = intervals[i][1];
+        if (first >= mini && second <= maxi)
+            continue;
+        else if (first <= maxi && second >= maxi)
         {
-            j++;
-            ans.push_back(intervals[i]);
+            k = 1;
+            maxi = second;
+        }
+        else if (first > maxi)
+        {
+            k = 1;
+            ans.push_back({mini, maxi});
+            mini = first;
+            maxi = second;
         }
     }
+    ans.push_back({mini, maxi});
     return ans;
 }
