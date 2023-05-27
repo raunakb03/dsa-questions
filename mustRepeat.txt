@@ -2,3 +2,7 @@
 2.) Permutation in a string leetcode --- try another apprach
 3.) Find all the permutations of a string 
 4.) reverse linked list in group of k
+
+----->dp:
+1.) nCr
+2.) 
