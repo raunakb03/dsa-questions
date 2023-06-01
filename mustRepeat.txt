@@ -7,3 +7,5 @@
 1.) nCr
 2.) nPr
 3.) MCM
+4.) maximize the cut segments
+5.) print longest common subsequence
