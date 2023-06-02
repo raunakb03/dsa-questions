@@ -9,3 +9,4 @@
 3.) MCM
 4.) maximize the cut segments
 5.) print longest common subsequence
+5.) number of subsequence with product less than k
