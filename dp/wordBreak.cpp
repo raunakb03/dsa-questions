@@ -4,6 +4,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+
+// memoization
 bool f(string s, unordered_set<string> &st, int start, vector<int> &dp)
 {
     if (start == s.size())
@@ -25,4 +27,24 @@ bool wordBreak(string s, vector<string> &wordDict)
     vector<int> dp(s.size(), -1);
     unordered_set<string> st(wordDict.begin(), wordDict.end());
     return f(s, st, 0, dp);
+}
+
+// tabulation
+bool wordBreak(string s, vector<string> &wordDict)
+{
+    vector<bool> dp(s.size() + 1, 0);
+    dp[0] = true;
+    unordered_set<string> set(wordDict.begin(), wordDict.end());
+    for (int i = 1; i <= s.size(); i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            if (dp[j] && set.count(s.substr(j, i - j)))
+            {
+                dp[i] = true;
+                break;
+            }
+        }
+    }
+    return dp[s.size()];
 }
