@@ -13,3 +13,6 @@
 6.) maximum length of subsequence such that no two elements are consecutive and its extension of three problems
 7.) maximal square
 8.) longest pallindromic substring
+
+------>
+1.) smallest range covering elements from k lists
