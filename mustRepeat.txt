@@ -14,5 +14,8 @@
 7.) maximal square
 8.) longest pallindromic substring
 
------->
+------>string
+1.) next permutation
+
+------->heaps
 1.) smallest range covering elements from k lists
