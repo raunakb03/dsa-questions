@@ -3,6 +3,9 @@
 3.) Find all the permutations of a string 
 4.) reverse linked list in group of k
 
+
+1.) find factorial of a large number
+
 ----->dp:
 1.) nCr
 2.) nPr
