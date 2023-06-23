@@ -14,20 +14,26 @@ public:
     }
 };
 
-TreeNode *f(vector<int> &preorder, int &ind, int bound)
-{
-    if (ind == preorder.size() || preorder[ind] > bound)
-    {
-        return NULL;
-    }
-
-    TreeNode *root = new TreeNode(preorder[ind++]);
-    root->left = f(preorder, ind, root->val);
-    root->right = f(preorder, ind, bound);
-    return root;
-}
 TreeNode *bstFromPreorder(vector<int> &preorder)
 {
-    int ind = 0;
-    return f(preorder, ind, INT_MAX);
+    if (preorder.size() == 0)
+        return NULL;
+
+    TreeNode *root = new TreeNode(preorder[0]);
+    if (preorder.size() == 1)
+        return root;
+
+    vector<int> left;
+    vector<int> right;
+    for (int i = 1; i < preorder.size(); i++)
+    {
+        if (preorder[i] > preorder[0])
+            right.push_back(preorder[i]);
+        else
+            left.push_back(preorder[i]);
+    }
+
+    root->left = bstFromPreorder(left);
+    root->right = bstFromPreorder(right);
+    return root;
 }
