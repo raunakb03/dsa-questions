@@ -13,7 +13,8 @@
     "tuple": "cpp",
     "functional": "cpp",
     "random": "cpp",
-    "regex": "cpp"
+    "regex": "cpp",
+    "map": "cpp"
   },
   "cph.general.onceMaintainerMessage": false,
   "C_Cpp.errorSquiggles": "disabled"
