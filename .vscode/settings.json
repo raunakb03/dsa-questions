@@ -14,7 +14,8 @@
     "functional": "cpp",
     "random": "cpp",
     "regex": "cpp",
-    "map": "cpp"
+    "map": "cpp",
+    "unordered_map": "cpp"
   },
   "cph.general.onceMaintainerMessage": false,
   "C_Cpp.errorSquiggles": "disabled"
