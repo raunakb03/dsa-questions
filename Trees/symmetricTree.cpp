@@ -13,6 +13,28 @@ public:
         right = NULL;
     }
 };
+
+// recursive
+bool f(TreeNode *left, TreeNode *right)
+{
+    if (left == NULL && right == NULL)
+        return true;
+    if (left == NULL || right == NULL)
+        return false;
+
+    if (left->val != right->val)
+        return false;
+
+    return f(left->left, right->right) && f(left->right, right->left);
+}
+bool isSymmetric(TreeNode *root)
+{
+    if (root == NULL)
+        return true;
+    return f(root->left, root->right);
+}
+
+// iterative
 bool isSymmetric(TreeNode *root)
 {
     if (!root)
