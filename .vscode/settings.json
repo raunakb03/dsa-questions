@@ -18,5 +18,10 @@
     "unordered_map": "cpp"
   },
   "cph.general.onceMaintainerMessage": false,
-  "C_Cpp.errorSquiggles": "disabled"
+  "C_Cpp.errorSquiggles": "disabled",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "python.formatting.provider": "none",
+  "python.linting.enabled": true
 }
